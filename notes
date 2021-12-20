@@ -1,0 +1,4 @@
+shodan http.favicon.hash:432733105 
+
+default cred sur ssh et interface web
+pi-star:raspberry
